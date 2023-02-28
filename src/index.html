@@ -3,11 +3,190 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Provider Calculator</title>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <h1>Provider Calculator</h1>
+
+    <div class="application">
+      <div class="drawings"> 
+        <div class="graph">
+          <div class="graph__head">
+            <div class="graph__company-container">
+              <div class="graph__name">
+                <h3>Backblaze.com</h3>
+              </div>
+              <div class="graph__options">
+                <label class="graph__label"><br></label>
+                <label class="graph__label"><br></label>
+              </div>
+            </div>
+            
+            <img 
+              src="./images/backblaze.png" 
+              alt="backblaze logo" 
+              class="graph__logo"
+            >
+          </div>
+
+          <div class="graph__draw">
+            <div id="backblazeGraph" class="graph__block"></div>
+
+            <div id="backblazeCosts" class="graph__value"></div>
+          </div>
+        </div>
+
+        <div class="graph">
+          <div class="graph__head">
+            <div class="graph__company-container">
+              <div class="graph__name">
+                <h3>Bunny.net</h3>
+              </div>
+              <div class="graph__options">
+                <label class="graph__label">
+                  <input 
+                    class="graph__radio"
+                    type="radio" 
+                    name="bunny" 
+                    id="HDD"
+                  >
+                  HDD
+                </label>
+                <label class="graph__label">
+                  <input 
+                    class="graph__radio"
+                    type="radio" 
+                    name="bunny" 
+                    id="SSD"
+                  >
+                  SSD
+                </label>
+              </div>
+            </div>
+            
+            <img 
+              src="./images/bunny.png" 
+              alt="bunny logo" 
+              class="graph__logo"
+            >
+          </div>
+
+          <div class="graph__draw">
+            <div id="bunnyGraph" class="graph__block"></div>
+
+            <div id="bunnyCosts" class="graph__value"></div>
+          </div>
+        </div>
+  
+        <div class="graph">
+          <div class="graph__head">
+            <div class="graph__company-container">
+              <div class="graph__name">
+                <h3>Scaleway</h3>
+              </div>
+              <div class="graph__options">
+                <label class="graph__label">
+                  <input 
+                    class="graph__radio"
+                    type="radio" 
+                    name="scaleway" 
+                    id="multi"
+                  >
+                  Multi
+                </label>
+                <label class="graph__label">
+                  <input 
+                    class="graph__radio"
+                    type="radio" 
+                    name="scaleway" 
+                    id="single"
+                  >
+                  Single
+                </label>
+              </div>
+            </div>
+            
+            <img 
+              src="./images/scaleway.png" 
+              alt="scaleway logo" 
+              class="graph__logo"
+            >
+          </div>
+
+          <div class="graph__draw">
+            <div id="scalewayGraph" class="graph__block"></div>
+
+            <div id="scalewayCosts" class="graph__value"></div>
+          </div>
+        </div>
+
+        <div class="graph">
+          <div class="graph__head">
+            <div class="graph__company-container">
+              <div class="graph__name">
+                <h3>Vultr</h3>
+              </div>
+              <div class="graph__options">
+                <label class="graph__label"><br></label>
+                <label class="graph__label"><br></label>
+              </div>
+            </div>
+            
+            <img 
+              src="./images/vultr.png" 
+              alt="vultr logo" 
+              class="graph__logo"
+            >
+          </div>
+
+          <div class="graph__draw">
+            <div id="vultrGraph" class="graph__block"></div>
+
+            <div id="vultrCosts" class="graph__value"></div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="range">
+        <div class="range__wrapper">
+          <label class="range__label">
+            Storage:
+          </label>
+
+          <input 
+            class="range__input"
+            type="range" 
+            id="storageRange" 
+            min="0" 
+            max="1000"
+            step="1"
+            value="0"
+          >
+
+          <div class="range__value" id="storageValue"></div>
+        </div>
+
+        <div class="range__wrapper">
+          <label class="range__label">
+            Transfer:
+          </label>
+
+          <input 
+            class="range__input"
+            type="range" 
+            id="transferRange" 
+            min="0"
+            max="1000"
+            step="1"
+            value="0"
+          >
+
+          <div class="range__value" id="transferValue"></div>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
